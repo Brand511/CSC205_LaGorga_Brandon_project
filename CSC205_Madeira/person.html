@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - My ASP.NET Application</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/6FC6147F-CD6D-AD43-82AC-3E7B4DF4FB79/main.js" charset="UTF-8"></script>
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Ajax"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        }({
+            instrumentationKey:"9887bbc4-d83e-445e-880a-4370021f74a4"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+    <style>
+        html {
+            font-size: 18px;
+        }
+
+        a, article, body, div, figcaption, figure, footer, header, h1,
+        h2, h3, img, li, nav, p, section, ul, fieldset, form, input, label, legend, textarea {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            max-width: 100%;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            text-align:left;
+            color:white;
+        }
+
+        /* global styles */
+        p {
+            margin: 0.4em 0;
+            font-size: 1.1em;
+        }
+
+        /* body and page container */
+        body {
+            font-family: Lato, Arial, Helvetica, sans-serif;
+            background: #59a7de;
+            background: url(Images/peaceful.jpeg);
+            background-size: 2000px;
+        }
+
+        .container {
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* skip navigation link */
+        p.skipnavigation {
+            margin: 0;
+        }
+
+            p.skipnavigation a {
+                position: absolute;
+                left: -10000px;
+            }
+
+                p.skipnavigation a:focus {
+                    color: black;
+                    background-color: snow;
+                    top: 2%;
+                    left: auto;
+                    right: 2%;
+                    z-index: 2;
+                }
+
+        /* header section */
+        header {
+            text-align: center;
+            max-width: 100%;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2em;
+        }
+
+        header p {
+            color: yellow;
+            font-size: 3.0em;
+        }
+
+        /* site navigation */
+        nav.sitenavigation {
+            max-width: 100%;
+        }
+
+            nav.sitenavigation li {
+                display: inline-block;
+                margin: 0.4em 0.6em;
+                font-size: 1.5em;
+            }
+
+            nav.sitenavigation a:link {
+                color: yellow;
+                text-decoration: none;
+            }
+
+            nav.sitenavigation a:visited {
+                color: #ffffff;
+            }
+
+            nav.sitenavigation a:hover, nav.sitenavigation a:focus {
+                color: yellow;
+                text-shadow: 1px -1px 0 #000000;
+            }
+        /* main content */
+        article {
+            text-align: left;
+            color: white;
+            overflow: auto;
+        }
+
+        h2 {
+            margin: 0 2% 0.4em;
+            font-size: 1.0em;
+        }
+
+        h3 {
+            text-align: right;
+            margin: 1em 0 0.5em 2%;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f5e312;
+        }
+
+        article p {
+            Text-align: right;
+            margin: 0 2% 0.4em;
+        }
+
+        figure {
+            width: 40%;
+            float: left;
+            text-align: center;
+        }
+
+        aside a:link {
+            color: white;
+        }
+
+        aside {
+            float: right;
+        }
+        /*Form section*/
+        form {
+            padding: 2%;
+            margin: 2%;
+            border: 2px solid black;
+            background-color: #ff9c78;
+        }
+        /* fieldset styles*/
+        fieldset {
+            margin: 0 0 1em 1em;
+        }
+
+        .contactinfo input {
+            border: 1px solid #777;
+            padding: 0.2em;
+            font-size: 1.0em;
+        }
+
+        .contactinfo input {
+            position: absolute;
+            left: 8em;
+        }
+
+        #nameinput, #emailinput, #addressinput {
+            width: 30em;
+        }
+
+        #phoneinput, #zipinput {
+            width: 12em;
+        }
+
+        legend {
+            margin: 0 0 0.4em -1em;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .submitbutton {
+            Margin-bottom: 0;
+        }
+
+        /*Label style*/
+        label {
+            font-size: 1em;
+        }
+
+        .contactinfo label {
+            display: block;
+            margin: 0.7em 0;
+            position: relative;
+        }
+
+        .timinginfo label {
+            margin-right: 0.5em;
+        }
+
+        .jobtype label {
+            display: block;
+            margin-bottom: 0.2em;
+        }
+
+        .additionalinfo label, textarea {
+            display: block;
+        }
+
+        /* footer section */
+        footer {
+            padding: 1% 1% 1% 5%;
+            clear: both;
+            color: white;
+        }
+
+        /* print styles */
+        @media print {
+            .container, h1, h2, p {
+                color: black;
+                background: white;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        @page {
+            margin: 1in;
+        }
+
+        #wrapper, #loginform {
+            margin: 0 auto;
+            padding-bottom: 25px;
+            width: 504px;
+            border: 1px solid #ACD8F0;
+            float:right;
+        }
+
+        #loginform {
+            padding-top: 18px;
+        }
+
+            #loginform p {
+                margin: 5px;
+            }
+
+        #chatbox {
+            text-align: left;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            padding: 10px;
+            background: #fff;
+            height: 270px;
+            width: 430px;
+            border: 1px solid #ACD8F0;
+            overflow: auto;
+        }
+
+        #usermsg {
+            width: 395px;
+            border: 1px solid #ACD8F0;
+        }
+
+        #submit {
+            width: 60px;
+        }
+
+        .error {
+            color: #ff0000;
+        }
+
+        #menu {
+            padding: 12.5px 25px 12.5px 25px;
+        }
+
+        .welcome {
+            float: left;
+        }
+
+        .logout {
+            float: right;
+        }
+
+        .msgln {
+            margin: 0 0 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <p class="skipnavigation"><a href="#contentstart">Skip navigation</a></p>
+            <header>
+                <p>ExpressFamily</p>
+            </header>
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="Project_readme.html">Home</a></li>
+                    <li><a href="family.html">Family</a></li>
+                    <li><a href="person.html">People</a></li>
+                    <li><a href="Help.html">Help</a></li>
+                    <li><a href="Register.html" id="registerLink">Register</a></li>
+                    <li><a href="Login.html" id="loginLink">Log in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-4">
+                <h2></h2>
+                <p>
+                    Select from anybody in the table below:
+                </p>
+                <table style="width:100%">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Phone Number</th>
+                    </tr>
+                    <tr>
+                        <td>G</td>
+                        <td>Madeira</td>
+                        <td>412-180-0163</td>
+                    </tr>
+                    <tr>
+                        <td>Jean</td>
+                        <td>Madeira</td>
+                        <td>412-555-1122</td>
+                    </tr>
+                    <tr>
+                        <td>Nick</td>
+                        <td>Madeira</td>
+                        <td>412-555-9988</td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Madeira</td>
+                        <td>412-555-1234</td>
+                    </tr>
+                    <tr>
+                        <td>Chris</td>
+                        <td>Madeira</td>
+                        <td>412-555-6759</td>
+                    </tr>
+                    <tr>
+                        <td>Jimmy</td>
+                        <td>Johns</td>
+                        <td>607-555-6758</td>
+                    </tr>
+                    <tr>
+                        <td>Stacey</td>
+                        <td>Johns</td>
+                        <td>607-555-6757</td>
+                    </tr>
+                    <tr>
+                        <td>Ian</td>
+                        <td>Johns</td>
+                        <td>607-555-2257</td>
+                    </tr>
+                    <tr>
+                        <td>Avery</td>
+                        <td>Johns</td>
+                        <td>607-553-4757</td>
+                    </tr>
+                    <tr>
+                        <td>Roy</td>
+                        <td>Ellies</td>
+                        <td>903-553-4757</td>
+                    </tr>
+                    <tr>
+                        <td>Michelle</td>
+                        <td>Ellis</td>
+                        <td>903-553-1947</td>
+                    </tr>
+                    <tr>
+                        <td>bernie</td>
+                        <td>Braddock</td>
+                        <td>814-553-4757</td>
+                    </tr>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Anderson</td>
+                        <td>302-553-4757</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="menu">
+                <p class="welcome">Welcome, <b></b></p>
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+                <div style="clear:both"></div>
+            </div>
+
+            <div id="chatbox"></div>
+
+            <form name="message" action="">
+                <input name="usermsg" type="text" id="usermsg" size="63" />
+                <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+            </form>
+        </div>
+
+        <footer>
+            <p>By Brandon LaGorga (724)-989-3935, bllagorg@geneva.edu</p>
+        </footer>
+    </div>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/respond.js"></script>
+
+
+
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Chrome","requestId":"0d755345573c474c889f5a13ac19c29d"}
+    </script>
+    <script type="text/javascript" src="http://localhost:53589/e934abf6ad2b42d6a18b7d8d1051ec12/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>
+
